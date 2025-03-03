@@ -1,5 +1,5 @@
 
-import Routes from '../index';
+import Routes from './Routes';
 
 export default function App() {
     return (
