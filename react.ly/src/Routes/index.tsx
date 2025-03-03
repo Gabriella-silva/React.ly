@@ -1,4 +1,4 @@
-/* Código gerado pelo chat gpt onde as rotas são declaradas aqui dentro e nn funciona igual*/
+/* Código gerado pelo chat gpt onde as rotas são declaradas aqui dentro e nn funciona igual
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Feed';
 import About from '../pages/New';
@@ -8,7 +8,7 @@ export default function AppRoutes() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/", element={<Feed />} />
+                <Route path="/" element={<Feed />} />
                 <Route path="/about" element={<New/>} />
             </Routes>
         </BrowserRouter>
