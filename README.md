@@ -2,7 +2,7 @@
 ## Instalar o cors de navegação
 
 ```sh 
-npm istall @react-navigation/native
+npm install @react-navigation/native
 ```
 
 ## Instalar dependencias de Navegação

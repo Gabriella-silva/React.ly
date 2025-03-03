@@ -15,7 +15,7 @@ export default function AppRoutes() {
     );
    
 }
-
+9+
 /*Meu código que até o chat aprovou e não funciona tambem, as rotas estão no arquivo tab.routes e devidamente declaradas 
 
 import { NavigationContainer } from "@react-navigation/native";
