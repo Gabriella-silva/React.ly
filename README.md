@@ -11,7 +11,7 @@ npm install @react-navigation/native
 npx expo install react-native-screens react-native-safe-area-context
 ```
 
-## Instalar Tab Bottom N avigation
+## Instalar Tab Bottom Navigation
 
 ```sh
  npm install @react-navigation/bottom-tabs
