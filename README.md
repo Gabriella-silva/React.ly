@@ -1,4 +1,6 @@
 # React.ly
+
+## Antes de usar o código no seu computador, é necessario realizar algumas instalações via terminal.
 ## Instalar o cors de navegação
 
 ```sh 
@@ -15,4 +17,9 @@ npx expo install react-native-screens react-native-safe-area-context
 
 ```sh
  npm install @react-navigation/bottom-tabs
+```
+
+## instalar drawer navigation (lateral)
+```sh
+npm install @react-navigation
 ```

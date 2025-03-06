@@ -2,6 +2,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import feed from '../Feed' ;
 import New from '../New' ;
 //podemos usar a biblioteca feather para icones mais tarde
+
+/*Rotas do bottom navigation, em um primeiro momento tera apenas 2 links*/
 const Tab = createBottomTabNavigator();
 
 
