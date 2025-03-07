@@ -1,44 +1,64 @@
-import { Button, Stylesheet, Text, View} from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import BottomSheet from '@gorhom/bottom-sheet';
-import {useCallback, useRef} from 'react';
-export default function FutureAppLogin(){
+import { useCallback, useRef, useMemo } from 'react';
 
+export default function FutureAppLogin() {
 
-    const bottomSheetref = useref(null);
-    //valor minimo e maximo do sheef
+    // Correção: 'useref' para 'useRef'
+    const bottomSheetRef = useRef(null);
+
+    // Valor mínimo e máximo do sheet
     const snapPoints = useMemo(() => ['30%', '80%'], []);
 
-    //funcao para fechar o bottomsheet
-const handleCloseAction = () => bottomSheetRef.current?.close();
+    // Função para fechar o bottomsheet
+    const handleCloseAction = () => bottomSheetRef.current?.close();
 
-//funcao para abrir o bottomsheet
-const handleOpenPress = () => bottomSheetRef.current?.expand();
+    // Função para abrir o bottomsheet
+    const handleOpenPress = () => bottomSheetRef.current?.expand();
+
+    const handleChange = useCallback((index) => {
+        console.log('Change status', index);
+    }, []);
 
     return (
-        <GestureHandlerRootView style={{ flex: 1}}>
-        <View style={styles.container}>
-{/*/* enableHandlePanning={true} handleComponent={() => <View style={{backgroundColor: '#000', width: 40, height: 6, borderRadius: 3}} />}** */}
-            <BottomSheet ref={bottomSheetRef}
-             index={0} snapPoints={snapPoints}
-              backgroundStyle={{backgroundColor:
-               '#FFF'}}
-                enablePanDownToClose={true} >
+        <GestureHandlerRootView style={{ flex: 1 }}>
+            <View style={styles.container}>
 
-                           <View style={styles.contentContainer}>
-                    < Text> Conteudo </Text>
-                    <Button title="Fechar" onPress={() => {}} />
-                </View>
-            </BottomSheet>
+                <Button title="Abrir" onPress={handleOpenPress} />
 
-        </View>
+                <BottomSheet
+                    ref={bottomSheetRef}
+                    index={0}
+                    snapPoints={snapPoints}
+                    backgroundStyle={{ backgroundColor: '#FFF' }}
+                    enablePanDownToClose={true}
+                    onChange={handleChange}
+                >
+                    <View style={styles.contentContainer}>
+                        <Text>Conteúdo</Text>
+                        <Button title="Fechar" onPress={handleCloseAction} />
+
+                        {/* Área para adicionar o componente de login */}
+                        {/* Exemplo: <LoginForm /> */}
+
+                    </View>
+                </BottomSheet>
+
+            </View>
         </GestureHandlerRootView>
     );
 }
-const styles = Stylesheet.create({
+
+// Correção: 'Stylesheet' para 'StyleSheet'
+const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#000",
         padding: 20,
-   },
+    },
+    contentContainer: {
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
 });
