@@ -54,11 +54,12 @@ export default function FutureAppLogin() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#000",
+        backgroundColor: "#313A4B",
         padding: 20,
     },
     contentContainer: {
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: '#F5F5F5s',
     }
 });
