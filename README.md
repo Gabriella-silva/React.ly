@@ -1,6 +1,6 @@
 # React.ly
 
-# Antes atualizem seu node e npm para a versão mais recomendada
+## Antes atualizem seu node e npm para a versão mais recomendada
 Isso nos ajuda a não ter problemas ao usar comandos via cmd, além de padronizar a equipe.
 
 
