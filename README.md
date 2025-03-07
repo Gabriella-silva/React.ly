@@ -74,13 +74,7 @@ npx expo install react-native-screens react-native-safe-area-context
 
 ## instalar drawer navigation (lateral)
 ```sh
-npm install @react-navigation/drawer
-```
+npx expo install react-native@0.76.7 react@18.3.1 @react-navigation/drawer@7.0.0
 
-
-
-## instalar slaoq (lateral)
-
-```sh
  npx expo install react-native-gesture-handler react-native-reanimated
  ```
