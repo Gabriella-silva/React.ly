@@ -25,7 +25,7 @@ export default function FutureAppLogin() {
         <GestureHandlerRootView style={{ flex: 1 }}>
             <View style={styles.container}>
 
-                <Button title="Abrir" onPress={handleOpenPress} />
+                <Button style={styles.but} title="Login" onPress={handleOpenPress} />
 
                 <BottomSheet
                     ref={bottomSheetRef}
@@ -37,7 +37,7 @@ export default function FutureAppLogin() {
                 >
                     <View style={styles.contentContainer}>
                         <Text>Conteúdo</Text>
-                        <Button title="Fechar" onPress={handleCloseAction} />
+                        <Button style={styles.Btn} title="Fechar" onPress={handleCloseAction} />
 
                         {/* Área para adicionar o componente de login */}
                         {/* Exemplo: <LoginForm /> */}
@@ -61,5 +61,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#F5F5F5s',
+    },
+    but:{
+        borderRadius: 23,
+        alignItems: 'center',
+        justifyContent: 'center',
+
+
     }
 });
