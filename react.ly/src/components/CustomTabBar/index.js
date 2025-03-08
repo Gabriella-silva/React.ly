@@ -28,8 +28,19 @@ export default function CustomTabBar( state, descriptors, navigation) {
                         target: route.key,
                     });
                 };
+
+                <TouchableOpacity
+                accessibilityRole="button"
+                accessibilityState={isFocused ? {selected:true} : {}}
+                accessibilityLabel={options.tabBarAccessibilityLabel}
+                testID={options.tabBarTestID}
+                onPress={onPress}
+                onLongPress={onLongPress}
+                style={{flex:1}}
+                >
+                    <Text>TESTE</Text>
+                </TouchableOpacity>
             })}
-              <Text>TESTE</Text>
         </View>
     </View>
   );
